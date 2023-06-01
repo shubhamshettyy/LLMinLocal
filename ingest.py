@@ -38,6 +38,7 @@ def main():
 
     # Create embeddings
     embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl",
+                                               model_kwargs={"device": "cpu"}
                                                 # model_kwargs={"device": "cuda"}
                                                 )
     

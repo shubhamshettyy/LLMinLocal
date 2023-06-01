@@ -48,7 +48,7 @@ def main():
     # load the instructorEmbeddings
     embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl",
                                                 model_kwargs={"device": "cpu"}
-                                                # model_kwargs={"device": "gpu"}
+                                                # model_kwargs={"device": "cuda"}
                                                 )
     # load the vectorstore
     db = Chroma(persist_directory=PERSIST_DIRECTORY, embedding_function=embeddings, client_settings=CHROMA_SETTINGS)
